@@ -32,7 +32,7 @@ public void initComponents()
 {
   c=this.getContentPane();
   c.setLayout(null);
-  c.setBackground(Color.orange);
+  c.setBackground(Color.green);
     icon=new ImageIcon(getClass().getResource("BSFMSTU Logo.PNG"));
 this.setIconImage(icon.getImage());
 
@@ -45,7 +45,7 @@ t_label=new JLabel();
 t_label.setText(" STUDENT INFORMATION ");
 t_label.setBounds(150,15,240,50);
 t_label.setFont(f2);
-t_label.setForeground(Color.red);
+t_label.setForeground(Color.black);
 t_label.setOpaque(true);
 t_label.setBackground(Color.green);
 //t_label.setCursor(cursor);
@@ -117,7 +117,7 @@ b_1.setFont(f);
 b_1.setCursor(cursor);
 c.add(b_1);
 
-b_2=new JButton("Cancel");
+b_2=new JButton("Clear");
 b_2.setBounds(260,330,100,40);
 b_2.setFont(f);
 b_2.setCursor(cursor);

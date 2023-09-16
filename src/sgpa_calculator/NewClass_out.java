@@ -46,7 +46,7 @@ public static float ca=0;
         
         c=this.getContentPane();
         c.setLayout(null);
-        c.setBackground(Color.yellow);
+        c.setBackground(Color.green);
         cursor=new Cursor(Cursor.HAND_CURSOR);
         f=new Font("Arial",Font.BOLD,14);
         f2=new Font("Arial",Font.BOLD,18);
@@ -55,7 +55,7 @@ label_0=new JLabel();
 label_0.setText(" Fill up this information ");
 label_0.setBounds(150,15,220,50);
 label_0.setFont(f2);
-label_0.setForeground(Color.red);
+label_0.setForeground(Color.black);
 label_0.setOpaque(true);
 label_0.setBackground(Color.green);
 //label_0.setCursor(cursor);
