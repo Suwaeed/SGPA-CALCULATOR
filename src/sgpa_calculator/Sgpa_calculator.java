@@ -91,24 +91,28 @@ sem_label.setBackground(Color.white);
 //sem_label.setCursor(cursor);
 c.add(sem_label);
 
-tf_1=new JTextField("03");
+tf_1=new JTextField("20111103");
 tf_1.setBounds(242,90,200,40);
 tf_1.setFont(f);
+tf_1.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_1);
 
 tf_2=new JTextField("Suwaeed Ul Islam");
 tf_2.setBounds(242,140,200,40);
 tf_2.setFont(f);
+tf_2.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_2);
 
 tf_3=new JTextField("2019-2020");
 tf_3.setBounds(242,190,200,40);
 tf_3.setFont(f);
+tf_3.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_3);
 
 tf_4=new JTextField("22");
 tf_4.setBounds(242,240,200,40);
 tf_4.setFont(f);
+tf_4.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_4);
 
 b_1=new JButton("Submit");

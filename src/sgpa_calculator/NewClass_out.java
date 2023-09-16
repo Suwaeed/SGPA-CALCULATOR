@@ -7,7 +7,7 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
+//import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,10 +21,7 @@ private Font f,f2;
 private JTextField t_1,t_2,t_3,t_4;
 private JButton bt_1,bt_2,bt_3;
 private Cursor cursor;
-private Scanner sc;
-//private String[] s=new String[Java_fr.num];
-//private String[] r=new String[Java_fr.num];
-//private String[] t=new String[Java_fr.num];
+//private Scanner sc;
 public static float ca=0;
  public static float exam_marks=0;
   public static float total_marks=0;
@@ -104,21 +101,25 @@ c.add(label_4);
 t_1=new JTextField();
 t_1.setBounds(252,90,100,40);
 t_1.setFont(f);
+t_1.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_1);
 
 t_2=new JTextField();
 t_2.setBounds(252,140,100,40);
 t_2.setFont(f);
+t_2.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_2);
 
 t_3=new JTextField();
 t_3.setBounds(252,190,100,40);
 t_3.setFont(f);
+t_3.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_3);
 
 t_4=new JTextField();
 t_4.setBounds(252,240,100,40);
 t_4.setFont(f);
+t_4.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_4);
 
 bt_1=new JButton("Submit");
