@@ -17,8 +17,8 @@ import javax.swing.JTextField;
 public class Sgpa_calculator extends JFrame{
 private ImageIcon icon;
 private Container c;
-private JLabel p_label,u_label,ses_label,sem_label;
-private Font f;
+private JLabel t_label,p_label,u_label,ses_label,sem_label;
+private Font f,f2;
 private JTextField tf_1,tf_2,tf_3,tf_4;
 private JButton b_1,b_2;
 private Cursor cursor;
@@ -37,12 +37,23 @@ public void initComponents()
 this.setIconImage(icon.getImage());
 
 f=new Font("Arial",Font.BOLD,14);
+f2=new Font("Arial",Font.BOLD,18);
 
 cursor=new Cursor(Cursor.HAND_CURSOR);
 
+t_label=new JLabel();
+t_label.setText(" STUDENT INFORMATION ");
+t_label.setBounds(150,15,160,40);
+t_label.setFont(f2);
+t_label.setForeground(Color.red);
+t_label.setOpaque(true);
+t_label.setBackground(Color.green);
+//p_label.setCursor(cursor);
+c.add(t_label);
+
 p_label=new JLabel();
-p_label.setText("Enter your Student ID: ");
-p_label.setBounds(50,15,160,40);
+p_label.setText(" Enter your Student ID: ");
+p_label.setBounds(50,75,160,40);
 p_label.setFont(f);
 p_label.setForeground(Color.red);
 p_label.setOpaque(true);
@@ -51,8 +62,8 @@ p_label.setBackground(Color.white);
 c.add(p_label);
 
 u_label=new JLabel();
-u_label.setText("Enter your Full Name: ");
-u_label.setBounds(50,65,160,40);
+u_label.setText(" Enter your Full Name: ");
+u_label.setBounds(50,125,160,40);
 u_label.setFont(f);
 u_label.setForeground(Color.red);
 u_label.setOpaque(true);
@@ -61,8 +72,8 @@ u_label.setBackground(Color.white);
 c.add(u_label);
 
 ses_label=new JLabel();
-ses_label.setText("Enter your Session: ");
-ses_label.setBounds(50,115,160,40);
+ses_label.setText(" Enter your Session: ");
+ses_label.setBounds(50,175,160,40);
 ses_label.setFont(f);
 ses_label.setForeground(Color.red);
 ses_label.setOpaque(true);
@@ -71,8 +82,8 @@ ses_label.setBackground(Color.white);
 c.add(ses_label);
 
 sem_label=new JLabel();
-sem_label.setText("Enter your Semester: ");
-sem_label.setBounds(50,165,160,40);
+sem_label.setText(" Enter your Semester: ");
+sem_label.setBounds(50,225,160,40);
 sem_label.setFont(f);
 sem_label.setForeground(Color.red);
 sem_label.setOpaque(true);
@@ -100,7 +111,7 @@ tf_4.setBounds(220,165,200,40);
 tf_4.setFont(f);
 c.add(tf_4);
 
-b_1=new JButton("Login");
+b_1=new JButton("Submit");
 b_1.setBounds(70,250,100,40);
 b_1.setFont(f);
 b_1.setCursor(cursor);
@@ -119,8 +130,8 @@ b_1.addActionListener(new ActionListener(){
         String name=tf_2.getText();
         String session=tf_3.getText();
         String semester=tf_4.getText();
-        String n=JOptionPane.showInputDialog(null,"Enter number of Courses:","05");
-        num=Integer.parseInt(n);
+        //String n=JOptionPane.showInputDialog(null,"Enter number of Courses:","05");
+        //num=Integer.parseInt(n);
         //System.out.println(num);
         dispose();
        //for(int i=0;i<num;i++){
