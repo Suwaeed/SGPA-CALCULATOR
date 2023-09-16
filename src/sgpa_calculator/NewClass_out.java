@@ -193,32 +193,33 @@ bt_3.addActionListener(new ActionListener(){
     public void actionPerformed(ActionEvent e)
     {
         dispose();
+        String s=String.format("%.3f",sgpa);
         if(sgpa==4.00)
         {
-           JOptionPane.showMessageDialog(null,"Extraordinary,Keep it up! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE); 
+           JOptionPane.showMessageDialog(null,"Extraordinary,Keep it up! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE); 
         }
         else if(sgpa>=3.75)
                 {
-                    JOptionPane.showMessageDialog(null,"Outstanding,Keep it up! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Outstanding,Keep it up! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE);
                 }
         else if(sgpa>=3.50)
                 {
-          JOptionPane.showMessageDialog(null,"Very Good,Keep it up! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+          JOptionPane.showMessageDialog(null,"Very Good,Keep it up! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE);
       }
         else if(sgpa>=3.25)
         {
-            JOptionPane.showMessageDialog(null,"Well done! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Well done! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE);
         }
         else if(sgpa>=3.00)
         {
-            JOptionPane.showMessageDialog(null,"Good! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Good! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE);
         }
         else if(sgpa<3.00 && sgpa>=2.00)
         {
-            JOptionPane.showMessageDialog(null,"Not So Good! you passed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Not So Good! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE);
         }
       else{
-          JOptionPane.showMessageDialog(null,"Sorry! you failed and your SGPA is "+sgpa,"RESULT",JOptionPane.PLAIN_MESSAGE);
+          JOptionPane.showMessageDialog(null,"Sorry! you failed and your SGPA is "+s,"RESULT",JOptionPane.WARNING_MESSAGE);
       }
     }
 });

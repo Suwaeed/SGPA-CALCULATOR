@@ -23,7 +23,7 @@ private JTextField tf_1,tf_2,tf_3,tf_4;
 private JButton b_1,b_2;
 private Cursor cursor;
 //private Scanner sc;
-public static int num;
+//public static int num;
 Sgpa_calculator()
         {
     initComponents();
