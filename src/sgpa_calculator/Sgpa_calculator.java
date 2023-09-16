@@ -43,7 +43,7 @@ cursor=new Cursor(Cursor.HAND_CURSOR);
 
 t_label=new JLabel();
 t_label.setText(" STUDENT INFORMATION ");
-t_label.setBounds(150,15,160,40);
+t_label.setBounds(150,15,240,50);
 t_label.setFont(f2);
 t_label.setForeground(Color.red);
 t_label.setOpaque(true);
@@ -53,7 +53,7 @@ c.add(t_label);
 
 p_label=new JLabel();
 p_label.setText(" Enter your Student ID: ");
-p_label.setBounds(50,75,160,40);
+p_label.setBounds(60,90,170,40);
 p_label.setFont(f);
 p_label.setForeground(Color.red);
 p_label.setOpaque(true);
@@ -63,7 +63,7 @@ c.add(p_label);
 
 u_label=new JLabel();
 u_label.setText(" Enter your Full Name: ");
-u_label.setBounds(50,125,160,40);
+u_label.setBounds(60,140,170,40);
 u_label.setFont(f);
 u_label.setForeground(Color.red);
 u_label.setOpaque(true);
@@ -73,7 +73,7 @@ c.add(u_label);
 
 ses_label=new JLabel();
 ses_label.setText(" Enter your Session: ");
-ses_label.setBounds(50,175,160,40);
+ses_label.setBounds(60,190,170,40);
 ses_label.setFont(f);
 ses_label.setForeground(Color.red);
 ses_label.setOpaque(true);
@@ -83,7 +83,7 @@ c.add(ses_label);
 
 sem_label=new JLabel();
 sem_label.setText(" Enter your Semester: ");
-sem_label.setBounds(50,225,160,40);
+sem_label.setBounds(60,240,170,40);
 sem_label.setFont(f);
 sem_label.setForeground(Color.red);
 sem_label.setOpaque(true);
@@ -92,33 +92,33 @@ sem_label.setBackground(Color.white);
 c.add(sem_label);
 
 tf_1=new JTextField("03");
-tf_1.setBounds(220,15,200,40);
+tf_1.setBounds(240,90,200,40);
 tf_1.setFont(f);
 c.add(tf_1);
 
 tf_2=new JTextField("Suwaeed Ul Islam");
-tf_2.setBounds(220,65,200,40);
+tf_2.setBounds(240,140,200,40);
 tf_2.setFont(f);
 c.add(tf_2);
 
 tf_3=new JTextField("2019-2020");
-tf_3.setBounds(220,115,200,40);
+tf_3.setBounds(240,190,200,40);
 tf_3.setFont(f);
 c.add(tf_3);
 
 tf_4=new JTextField("22");
-tf_4.setBounds(220,165,200,40);
+tf_4.setBounds(240,240,200,40);
 tf_4.setFont(f);
 c.add(tf_4);
 
 b_1=new JButton("Submit");
-b_1.setBounds(70,250,100,40);
+b_1.setBounds(80,330,100,40);
 b_1.setFont(f);
 b_1.setCursor(cursor);
 c.add(b_1);
 
 b_2=new JButton("Cancel");
-b_2.setBounds(220,250,100,40);
+b_2.setBounds(235,330,100,40);
 b_2.setFont(f);
 b_2.setCursor(cursor);
 c.add(b_2);
@@ -155,9 +155,9 @@ b_2.addActionListener(new ActionListener(){
         Sgpa_calculator frame=new Sgpa_calculator();
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(550, 400);
+        frame.setSize(650, 500);
         frame.setLocationRelativeTo(null);
-        frame.setTitle("Fill up this information");
+        frame.setTitle(" Login Page");
        
     }
     
