@@ -48,7 +48,7 @@ t_label.setFont(f2);
 t_label.setForeground(Color.red);
 t_label.setOpaque(true);
 t_label.setBackground(Color.green);
-//p_label.setCursor(cursor);
+//t_label.setCursor(cursor);
 c.add(t_label);
 
 p_label=new JLabel();
@@ -92,33 +92,33 @@ sem_label.setBackground(Color.white);
 c.add(sem_label);
 
 tf_1=new JTextField("03");
-tf_1.setBounds(240,90,200,40);
+tf_1.setBounds(242,90,200,40);
 tf_1.setFont(f);
 c.add(tf_1);
 
 tf_2=new JTextField("Suwaeed Ul Islam");
-tf_2.setBounds(240,140,200,40);
+tf_2.setBounds(242,140,200,40);
 tf_2.setFont(f);
 c.add(tf_2);
 
 tf_3=new JTextField("2019-2020");
-tf_3.setBounds(240,190,200,40);
+tf_3.setBounds(242,190,200,40);
 tf_3.setFont(f);
 c.add(tf_3);
 
 tf_4=new JTextField("22");
-tf_4.setBounds(240,240,200,40);
+tf_4.setBounds(242,240,200,40);
 tf_4.setFont(f);
 c.add(tf_4);
 
 b_1=new JButton("Submit");
-b_1.setBounds(80,330,100,40);
+b_1.setBounds(100,330,100,40);
 b_1.setFont(f);
 b_1.setCursor(cursor);
 c.add(b_1);
 
 b_2=new JButton("Cancel");
-b_2.setBounds(235,330,100,40);
+b_2.setBounds(260,330,100,40);
 b_2.setFont(f);
 b_2.setCursor(cursor);
 c.add(b_2);

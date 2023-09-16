@@ -16,22 +16,22 @@ import javax.swing.JTextField;
 
 public class NewClass_out extends JFrame {
     private Container c;
-    private JLabel label_1,label_2,label_3;
-private Font f;
-private JTextField t_1,t_2,t_3;
+    private JLabel label_0,label_1,label_2,label_3,label_4;
+private Font f,f2;
+private JTextField t_1,t_2,t_3,t_4;
 private JButton bt_1,bt_2,bt_3;
 private Cursor cursor;
 private Scanner sc;
 //private String[] s=new String[Java_fr.num];
 //private String[] r=new String[Java_fr.num];
 //private String[] t=new String[Java_fr.num];
-public static float [] ca=new float[Sgpa_calculator.num];
- public static float [] exam_marks=new float [Sgpa_calculator.num];
-  public static float [] total_marks=new float[Sgpa_calculator.num];
+public static float ca=0;
+ public static float exam_marks=0;
+  public static float total_marks=0;
 
     // Declare arrays to store grade points and credit hours
-   public static float [] grade_points=new float[Sgpa_calculator.num];
-   public static float [] credit_Hours=new float[Sgpa_calculator.num];
+   public static float grade_points=0;
+   public static float credit_Hours=0;
 
    public float total_credit=0;
    public float totalGradePoints = 0;
@@ -40,75 +40,101 @@ public static float [] ca=new float[Sgpa_calculator.num];
     NewClass_out()
     {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500,350);
+        this.setSize(600,450);
         this.setLocationRelativeTo(null);
-        this.setTitle("Fill up this information");
+        this.setTitle(" Input Page");
         
         c=this.getContentPane();
         c.setLayout(null);
         c.setBackground(Color.yellow);
         cursor=new Cursor(Cursor.HAND_CURSOR);
         f=new Font("Arial",Font.BOLD,14);
+        f2=new Font("Arial",Font.BOLD,18);
+
+label_0=new JLabel();
+label_0.setText(" Fill up this information ");
+label_0.setBounds(150,15,220,50);
+label_0.setFont(f2);
+label_0.setForeground(Color.red);
+label_0.setOpaque(true);
+label_0.setBackground(Color.green);
+//label_0.setCursor(cursor);
+c.add(label_0);
 
 label_1=new JLabel();
-label_1.setText("Enter Credit: ");
-label_1.setBounds(50,15,145,40);
+label_1.setText(" Enter Course Code: ");
+label_1.setBounds(90,90,150,40);
 label_1.setFont(f);
 label_1.setForeground(Color.red);
 label_1.setOpaque(true);
 label_1.setBackground(Color.white);
-label_1.setCursor(cursor);
+//label_1.setCursor(cursor);
 c.add(label_1);
 
 label_2=new JLabel();
-label_2.setText("Enter CA Marks: ");
-label_2.setBounds(50,65,145,40);
+label_2.setText(" Enter Credit: ");
+label_2.setBounds(90,140,150,40);
 label_2.setFont(f);
 label_2.setForeground(Color.red);
 label_2.setOpaque(true);
 label_2.setBackground(Color.white);
-label_2.setCursor(cursor);
+//label_2.setCursor(cursor);
 c.add(label_2);
 
 label_3=new JLabel();
-label_3.setText("Enter Exam Marks: ");
-label_3.setBounds(50,115,145,40);
+label_3.setText(" Enter CA Marks: ");
+label_3.setBounds(90,190,150,40);
 label_3.setFont(f);
 label_3.setForeground(Color.red);
 label_3.setOpaque(true);
 label_3.setBackground(Color.white);
-label_3.setCursor(cursor);
+//label_3.setCursor(cursor);
 c.add(label_3);
 
+label_4=new JLabel();
+label_4.setText(" Enter Exam Marks: ");
+label_4.setBounds(90,240,150,40);
+label_4.setFont(f);
+label_4.setForeground(Color.red);
+label_4.setOpaque(true);
+label_4.setBackground(Color.white);
+//label_4.setCursor(cursor);
+c.add(label_4);
+
 t_1=new JTextField();
-t_1.setBounds(205,15,100,40);
+t_1.setBounds(252,90,100,40);
 t_1.setFont(f);
 c.add(t_1);
 
 t_2=new JTextField();
-t_2.setBounds(205,65,100,40);
+t_2.setBounds(252,140,100,40);
 t_2.setFont(f);
 c.add(t_2);
 
 t_3=new JTextField();
-t_3.setBounds(205,115,100,40);
+t_3.setBounds(252,190,100,40);
 t_3.setFont(f);
 c.add(t_3);
 
+t_4=new JTextField();
+t_4.setBounds(252,240,100,40);
+t_4.setFont(f);
+c.add(t_4);
+
 bt_1=new JButton("Submit");
-bt_1.setBounds(60,250,100,40);
+bt_1.setBounds(70,330,100,40);
 bt_1.setFont(f);
 bt_1.setCursor(cursor);
 c.add(bt_1);
 
 bt_2=new JButton("Clear");
-bt_2.setBounds(200,250,100,40);
+bt_2.setBounds(210,330,100,40);
 bt_2.setFont(f);
 bt_2.setCursor(cursor);
 c.add(bt_2);
 
-bt_3=new JButton("Output");
-bt_3.setBounds(340,250,100,40);
+bt_3=new JButton("Calculate");
+bt_3.setBounds(350,330,115,40);
 bt_3.setFont(f);
 bt_3.setCursor(cursor);
 c.add(bt_3);
@@ -117,30 +143,30 @@ bt_1.addActionListener(new ActionListener(){
     public void actionPerformed(ActionEvent e)
     {
         try{
-        for(int i=0;i<1;i++){
-        credit_Hours[i]=Float.parseFloat(t_1.getText());
-        ca[i]=Float.parseFloat(t_2.getText());
-        exam_marks[i]=Float.parseFloat(t_3.getText());
-        //System.out.println(credit_Hours[i]);
-        //System.out.println(ca[i]);
-        //System.out.println(exam_marks[i]);
-        total_marks[i]=ca[i]+exam_marks[i];
-        if(credit_Hours[i]==3)
+            String course=t_1.getText();
+        credit_Hours=Float.parseFloat(t_2.getText());
+        ca=Float.parseFloat(t_3.getText());
+        exam_marks=Float.parseFloat(t_4.getText());
+        //System.out.println(credit_Hours);
+        //System.out.println(ca);
+        //System.out.println(exam_marks);
+        total_marks=ca+exam_marks;
+        if(credit_Hours==3)
         {
-            grade_points[i]=theorygp(total_marks[i]);
+            grade_points=theorygp(total_marks);
         }
-        else if(credit_Hours[i]==1.5)
+        else if(credit_Hours==1.5)
         {
-            grade_points[i]=labgp(total_marks[i]);
+            grade_points=labgp(total_marks);
         }
         //System.out.print("\nGrade points of subject "+(i+1)+"="+grade_points[i]+"\n");
-        totalGradePoints += grade_points[i] * credit_Hours[i];
-        totalCreditHours += credit_Hours[i];
+        totalGradePoints += grade_points * credit_Hours;
+        totalCreditHours += credit_Hours;
         t_1.setText("");
         t_2.setText("");
         t_3.setText("");
-        }
-
+        t_4.setText("");
+        
     // Calculate the SGPA
     sgpa = totalGradePoints / totalCreditHours;
             //System.out.println("SGPA="+sgpa);
@@ -158,6 +184,7 @@ bt_2.addActionListener(new ActionListener(){
         t_1.setText("");
         t_2.setText("");
         t_3.setText("");
+        t_4.setText("");
     }
 });
 
