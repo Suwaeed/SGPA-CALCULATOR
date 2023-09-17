@@ -20,7 +20,9 @@ public class Output extends JFrame {
     private Container c;
 private JLabel title,bottom;
 private Font f1,f2;
+
 //private JTextField tf_1,tf_2,tf_3,tf_4;
+
 private JButton exitbutton,d;
 private Cursor cursor;
 private JTable table;
@@ -28,6 +30,7 @@ private DefaultTableModel model;
 private JScrollPane scroll;
 private String[] column={"ID","Name","Session","Semester","SGPA"};
 private String[] row=new String[5];
+
 //private static String id,name,semister,session;
 
     Output(){
@@ -71,9 +74,10 @@ c.add(bottom);
   table.setSelectionBackground(Color.orange);
   table.setCursor(cursor);
   table.setBackground(Color.white);
-  table.setRowHeight(30);
+  table.setRowHeight(35);
   //table.setBounds(50,65,420,420);
   //c.add(table);
+  
   scroll=new JScrollPane(table);
   scroll.setBounds(50,80,500,150);
   c.add(scroll);
