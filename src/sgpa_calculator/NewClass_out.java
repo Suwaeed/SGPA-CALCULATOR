@@ -21,6 +21,7 @@ private Font f,f2;
 private JTextField t_1,t_2,t_3,t_4;
 private JButton bt_1,bt_2,bt_3;
 private Cursor cursor;
+public static String s;
 //private Scanner sc;
 
 public static float ca=0;
@@ -200,7 +201,7 @@ bt_3.addActionListener(new ActionListener(){
     public void actionPerformed(ActionEvent e)
     {
         dispose();
-        String s=String.format("%.3f",sgpa);
+        s=String.format("%.3f",sgpa);
         
         if(sgpa==4.00)
         {
@@ -229,6 +230,9 @@ bt_3.addActionListener(new ActionListener(){
       else{
           JOptionPane.showMessageDialog(null,"Sorry! you failed and your SGPA is "+s,"RESULT",JOptionPane.WARNING_MESSAGE);
       }
+        
+        Output fr=new Output();
+        fr.setVisible(true);
     }
 });
         

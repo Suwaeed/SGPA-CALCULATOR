@@ -23,6 +23,7 @@ private Font f,f2;
 private JTextField tf_1,tf_2,tf_3,tf_4;
 private JButton b_1,b_2;
 private Cursor cursor;
+public static String id,name,session,semester;
 //private Scanner sc;
 //public static int num;
 
@@ -134,10 +135,10 @@ c.add(b_2);
 b_1.addActionListener(new ActionListener(){
     public void actionPerformed(ActionEvent e)
     {
-        String id=tf_1.getText();
-        String name=tf_2.getText();
-        String session=tf_3.getText();
-        String semester=tf_4.getText();
+        id=tf_1.getText();
+        name=tf_2.getText();
+        session=tf_3.getText();
+        semester=tf_4.getText();
         
         //String n=JOptionPane.showInputDialog(null,"Enter number of Courses:","05");
         //num=Integer.parseInt(n);
