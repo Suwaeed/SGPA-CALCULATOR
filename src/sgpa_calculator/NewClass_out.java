@@ -22,6 +22,7 @@ private JTextField t_1,t_2,t_3,t_4;
 private JButton bt_1,bt_2,bt_3;
 private Cursor cursor;
 //private Scanner sc;
+
 public static float ca=0;
  public static float exam_marks=0;
   public static float total_marks=0;
@@ -34,23 +35,24 @@ public static float ca=0;
    public float totalGradePoints = 0;
    public float totalCreditHours = 0;
    public static float sgpa = 0;
+   
     NewClass_out()
     {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(600,450);
         this.setLocationRelativeTo(null);
-        this.setTitle(" Input Page");
+        this.setTitle(" Fill up this information");
         
         c=this.getContentPane();
         c.setLayout(null);
         c.setBackground(Color.green);
         cursor=new Cursor(Cursor.HAND_CURSOR);
         f=new Font("Arial",Font.BOLD,14);
-        f2=new Font("Arial",Font.BOLD,18);
+        f2=new Font("Arial",Font.BOLD,22);
 
 label_0=new JLabel();
-label_0.setText(" Fill up this information ");
-label_0.setBounds(150,15,220,50);
+label_0.setText(" SGPA CALCULATOR ");
+label_0.setBounds(150,15,260,50);
 label_0.setFont(f2);
 label_0.setForeground(Color.black);
 label_0.setOpaque(true);
@@ -60,7 +62,7 @@ c.add(label_0);
 
 label_1=new JLabel();
 label_1.setText(" Enter Course Code: ");
-label_1.setBounds(90,90,150,40);
+label_1.setBounds(100,90,150,40);
 label_1.setFont(f);
 label_1.setForeground(Color.red);
 label_1.setOpaque(true);
@@ -70,7 +72,7 @@ c.add(label_1);
 
 label_2=new JLabel();
 label_2.setText(" Enter Credit: ");
-label_2.setBounds(90,140,150,40);
+label_2.setBounds(100,140,150,40);
 label_2.setFont(f);
 label_2.setForeground(Color.red);
 label_2.setOpaque(true);
@@ -80,7 +82,7 @@ c.add(label_2);
 
 label_3=new JLabel();
 label_3.setText(" Enter CA Marks: ");
-label_3.setBounds(90,190,150,40);
+label_3.setBounds(100,190,150,40);
 label_3.setFont(f);
 label_3.setForeground(Color.red);
 label_3.setOpaque(true);
@@ -90,7 +92,7 @@ c.add(label_3);
 
 label_4=new JLabel();
 label_4.setText(" Enter Exam Marks: ");
-label_4.setBounds(90,240,150,40);
+label_4.setBounds(100,240,150,40);
 label_4.setFont(f);
 label_4.setForeground(Color.red);
 label_4.setOpaque(true);
@@ -99,25 +101,25 @@ label_4.setBackground(Color.white);
 c.add(label_4);
 
 t_1=new JTextField();
-t_1.setBounds(252,90,100,40);
+t_1.setBounds(262,90,100,40);
 t_1.setFont(f);
 t_1.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_1);
 
 t_2=new JTextField();
-t_2.setBounds(252,140,100,40);
+t_2.setBounds(262,140,100,40);
 t_2.setFont(f);
 t_2.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_2);
 
 t_3=new JTextField();
-t_3.setBounds(252,190,100,40);
+t_3.setBounds(262,190,100,40);
 t_3.setFont(f);
 t_3.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_3);
 
 t_4=new JTextField();
-t_4.setBounds(252,240,100,40);
+t_4.setBounds(262,240,100,40);
 t_4.setFont(f);
 t_4.setHorizontalAlignment(JTextField.CENTER);
 c.add(t_4);
@@ -148,9 +150,11 @@ bt_1.addActionListener(new ActionListener(){
         credit_Hours=Float.parseFloat(t_2.getText());
         ca=Float.parseFloat(t_3.getText());
         exam_marks=Float.parseFloat(t_4.getText());
+        
         //System.out.println(credit_Hours);
         //System.out.println(ca);
         //System.out.println(exam_marks);
+        
         total_marks=ca+exam_marks;
         if(credit_Hours==3)
         {
@@ -160,9 +164,12 @@ bt_1.addActionListener(new ActionListener(){
         {
             grade_points=labgp(total_marks);
         }
+        
         //System.out.print("\nGrade points of subject "+(i+1)+"="+grade_points[i]+"\n");
+        
         totalGradePoints += grade_points * credit_Hours;
         totalCreditHours += credit_Hours;
+        
         t_1.setText("");
         t_2.setText("");
         t_3.setText("");
@@ -194,6 +201,7 @@ bt_3.addActionListener(new ActionListener(){
     {
         dispose();
         String s=String.format("%.3f",sgpa);
+        
         if(sgpa==4.00)
         {
            JOptionPane.showMessageDialog(null,"Extraordinary,Keep it up! you passed and your SGPA is "+s,"RESULT",JOptionPane.PLAIN_MESSAGE); 
@@ -225,6 +233,7 @@ bt_3.addActionListener(new ActionListener(){
 });
         
     }
+    
     public static float theorygp(float marks){
     if(marks>=79.5 && marks<=100)
     {
@@ -267,6 +276,7 @@ bt_3.addActionListener(new ActionListener(){
         return 0.00f;
     }
 }
+    
 public static float labgp(float marks){
     if(marks>=40 && marks<=50)
     {

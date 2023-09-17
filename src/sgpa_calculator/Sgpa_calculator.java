@@ -1,3 +1,4 @@
+
 package sgpa_calculator;
 
 import java.awt.Color;
@@ -6,7 +7,7 @@ import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
+//import java.util.Scanner;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,6 +25,8 @@ private JButton b_1,b_2;
 private Cursor cursor;
 //private Scanner sc;
 //public static int num;
+
+
 Sgpa_calculator()
         {
     initComponents();
@@ -33,6 +36,7 @@ public void initComponents()
   c=this.getContentPane();
   c.setLayout(null);
   c.setBackground(Color.green);
+  
     icon=new ImageIcon(getClass().getResource("BSFMSTU Logo.PNG"));
 this.setIconImage(icon.getImage());
 
@@ -53,7 +57,7 @@ c.add(t_label);
 
 p_label=new JLabel();
 p_label.setText(" Enter your Student ID: ");
-p_label.setBounds(60,90,170,40);
+p_label.setBounds(70,90,170,40);
 p_label.setFont(f);
 p_label.setForeground(Color.red);
 p_label.setOpaque(true);
@@ -63,7 +67,7 @@ c.add(p_label);
 
 u_label=new JLabel();
 u_label.setText(" Enter your Full Name: ");
-u_label.setBounds(60,140,170,40);
+u_label.setBounds(70,140,170,40);
 u_label.setFont(f);
 u_label.setForeground(Color.red);
 u_label.setOpaque(true);
@@ -73,7 +77,7 @@ c.add(u_label);
 
 ses_label=new JLabel();
 ses_label.setText(" Enter your Session: ");
-ses_label.setBounds(60,190,170,40);
+ses_label.setBounds(70,190,170,40);
 ses_label.setFont(f);
 ses_label.setForeground(Color.red);
 ses_label.setOpaque(true);
@@ -83,7 +87,7 @@ c.add(ses_label);
 
 sem_label=new JLabel();
 sem_label.setText(" Enter your Semester: ");
-sem_label.setBounds(60,240,170,40);
+sem_label.setBounds(70,240,170,40);
 sem_label.setFont(f);
 sem_label.setForeground(Color.red);
 sem_label.setOpaque(true);
@@ -92,37 +96,37 @@ sem_label.setBackground(Color.white);
 c.add(sem_label);
 
 tf_1=new JTextField("20111103");
-tf_1.setBounds(242,90,200,40);
+tf_1.setBounds(252,90,200,40);
 tf_1.setFont(f);
 tf_1.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_1);
 
 tf_2=new JTextField("Suwaeed Ul Islam");
-tf_2.setBounds(242,140,200,40);
+tf_2.setBounds(252,140,200,40);
 tf_2.setFont(f);
 tf_2.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_2);
 
 tf_3=new JTextField("2019-2020");
-tf_3.setBounds(242,190,200,40);
+tf_3.setBounds(252,190,200,40);
 tf_3.setFont(f);
 tf_3.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_3);
 
 tf_4=new JTextField("22");
-tf_4.setBounds(242,240,200,40);
+tf_4.setBounds(252,240,200,40);
 tf_4.setFont(f);
 tf_4.setHorizontalAlignment(JTextField.CENTER);
 c.add(tf_4);
 
 b_1=new JButton("Submit");
-b_1.setBounds(100,330,100,40);
+b_1.setBounds(115,330,100,40);
 b_1.setFont(f);
 b_1.setCursor(cursor);
 c.add(b_1);
 
 b_2=new JButton("Clear");
-b_2.setBounds(260,330,100,40);
+b_2.setBounds(275,330,100,40);
 b_2.setFont(f);
 b_2.setCursor(cursor);
 c.add(b_2);
@@ -134,13 +138,17 @@ b_1.addActionListener(new ActionListener(){
         String name=tf_2.getText();
         String session=tf_3.getText();
         String semester=tf_4.getText();
+        
         //String n=JOptionPane.showInputDialog(null,"Enter number of Courses:","05");
         //num=Integer.parseInt(n);
         //System.out.println(num);
+        
         dispose();
        //for(int i=0;i<num;i++){
+       
         NewClass_out frame=new NewClass_out();
         frame.setVisible(true);
+        
         //}
     }
 });
@@ -161,7 +169,7 @@ b_2.addActionListener(new ActionListener(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(650, 500);
         frame.setLocationRelativeTo(null);
-        frame.setTitle(" Login Page");
+        frame.setTitle(" Home Page");
        
     }
     
